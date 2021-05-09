@@ -16,5 +16,23 @@
     already declared in server.js-->
    <!-- css/style.css ✅ 
         ../public/css/style.css ❌-->
+        <h3>Say Hello</h3>
+        <form action="/hello" method="GET">
+            <input name="user" type="text">
+            <button type="submit">SUBMIT</button>
+        </form>
+        
+        <h3>Google Search</h3>
+        <!-- <form action="https://google.com/search" method="GET"> -->
+        <form method="GET">
+            <input name="q" type="text" placeholder="search query">
+            <!-- <button type="submit">SEARCH</button> -->
+            <button formaction="https://google.com/search" type="submit">Search Google</button>
+            <button formaction="https://bing.com/search" type="submit">Search Bing</button>
+            <button formaction="https://duckduckgo.com/" type="submit">Search DuckDuckgo</button>
+        </form>
+
+        <!-- using formaction we can make a many buttons with their own function 
+         rather than by writing action in form element-->
 </body>
 </html>
