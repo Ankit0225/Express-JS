@@ -16,4 +16,8 @@ any.use('/public', express.static(__dirname + "/public"))
 
 any.use('/todo', todoRoute)
 
-any.listen(9090)
+any.listen(9090, () => {
+   setTimeout(()=> {
+     console.log('Server Started on http://localhost:9090');
+   },2000)
+})
